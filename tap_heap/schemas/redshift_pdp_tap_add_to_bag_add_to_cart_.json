@@ -1,0 +1,108 @@
+{
+    "$schema": "http://json-schema.org/schema#",
+    "type": "object",
+    "properties": {
+        "event_id": {
+            "type": [
+                "null",
+                "integer"
+            ]
+        },
+        "user_id": {
+            "type": [
+                "null",
+                "integer"
+            ]
+        },
+        "session_id": {
+            "type": [
+                "null",
+                "integer"
+            ]
+        },
+        "type": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "library": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "platform": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "device_type": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "country": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "region": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "city": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "ip": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "shopifypdp_handle": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "shopifypdp_id": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "path": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "target_next": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "time": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "_sdc_sync_id": {
+            "type": [
+                "null",
+                "string"
+            ]
+        }
+    }
+}

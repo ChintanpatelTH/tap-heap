@@ -1,0 +1,210 @@
+{
+    "$schema": "http://json-schema.org/schema#",
+    "type": "object",
+    "properties": {
+        "user_id": {
+            "type": [
+                "null",
+                "integer"
+            ]
+        },
+        "identity": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "handle": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "email": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "customer_id": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "optimizely_t1232_redo_redirect_leggings_collection": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "optimizely_ecom_211_holdback_get_the_look_hiding_builder": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "optimizely_ecom_1098_higher_placement_for_similar_items_ver_2_0": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "optimizely_ecom_403_quick_add_with_image_changing_on_hover_and_dark_panel": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "optimizely_t1325_shop_by_color_in_the_cart": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "optimizely_t940_hide_top_checkout_button_on_mobile": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "optimizely_ecom_413_differentiate_core_vs_seasonal_swatches": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "optimizely_t1232_redirect_leggings_collection_to_one_with_not_every_color": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "optimizely_ecom_866_ymal_product_recommendation_service": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "optimizely_ecom_937_pairs_great_with_products_from_recommendation_service_2_0_": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "optimizely_t643_sticky_add_to_cart_button": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "optimizely_t1316_holdback_test_hiding_builder_block_get_the_look_": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "optimizely_t1322_redirect_beauty_landing_page_to_a_different_one": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "optimizely_t639_model_changer": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "optimizely_t952_urgency_messaging": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "optimizely_ecom_1098_higher_placement_for_similar_items": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "optimizely_ecom_1585_quick_add_on_mobile_and_tablets": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "optimizely_t1238_shop_by_color": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "optimizely_ecom_443_similar_items_data_science": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "optimizely_t957_a_b_test_hiding_size_filter_panel_on_plp": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "optimizely_sticky_atc_button_placed_on_top_desktop_version": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "optimizely_sticky_atc_button_placed_on_top_mobile_version": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "optimizely_t1296_holdback_test_hiding_builder_block_super_pdp_": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "optimizely_t268_quick_add": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "optimizely_ecom_937_pairs_great_with_products_from_recommendation_service": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "optimizely_ecom_1840_product_info_hierarchy_": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "last_modified": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "joindate": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "_sdc_sync_id": {
+            "type": [
+                "null",
+                "string"
+            ]
+        }
+    }
+}

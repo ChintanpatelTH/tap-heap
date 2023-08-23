@@ -1,0 +1,132 @@
+{
+    "$schema": "http://json-schema.org/schema#",
+    "type": "object",
+    "properties": {
+        "event_id": {
+            "type": [
+                "null",
+                "integer"
+            ]
+        },
+        "user_id": {
+            "type": [
+                "null",
+                "integer"
+            ]
+        },
+        "session_id": {
+            "type": [
+                "null",
+                "integer"
+            ]
+        },
+        "type": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "library": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "platform": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "device_type": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "country": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "region": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "city": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "ip": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "referrer": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "landing_page": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "browser": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "utm_source": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "utm_campaign": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "utm_medium": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "device": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "app_name": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "time": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "_sdc_sync_id": {
+            "type": [
+                "null",
+                "string"
+            ]
+        }
+    }
+}

@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 from functools import cached_property
+from pathlib import Path
 from typing import TYPE_CHECKING, Any, Iterable
 
 from singer_sdk.streams import Stream
@@ -13,6 +14,7 @@ if TYPE_CHECKING:
     import singer_sdk._singerlib as singer
     from singer_sdk.tap_base import Tap
 
+SCHEMAS_DIR = Path(__file__).parent / Path("./schemas")
 
 class HeapStream(Stream):
     """Stream class for Heap streams."""
@@ -36,7 +38,6 @@ class HeapStream(Stream):
         self.schema_cols = columns
         self.manifest = manifest_obj
         self.starting_replication_key_value: str | None = None
-        self.primary_keys = self.get_key_properties(name) or []
         if tap.state:
             stream_name = name
             if stream_name not in tap.state["bookmarks"]:
@@ -66,6 +67,33 @@ class HeapStream(Stream):
         # This is set to a constant because the tap only supports _sdc_last_modified as
         # an incremental replication key, not custom values.
         self.replication_key = "_sdc_sync_id"
+
+    @property
+    def primary_keys(self) -> list[str] | None:
+        """Get primary keys.
+
+        Returns:
+            A list of primary key(s) for the stream.
+        """
+        return ["event_id"]
+
+    @primary_keys.setter
+    def primary_keys(self, new_value: list[str] | None) -> None:
+        """Set primary key(s) for the stream.
+
+        Args:
+            new_value: TODO
+        """
+        self._primary_keys = new_value
+
+    @property
+    def schema_filepath(self) -> Path | None:
+        """Get path to schema file.
+
+        Returns:
+            Path to a schema file for the stream or `None` if n/a.
+        """
+        return SCHEMAS_DIR / Path(f"{self.name}.json")
 
     def get_records(
         self,
@@ -106,35 +134,35 @@ class HeapStream(Stream):
         """
         return False
 
-    @cached_property
-    def schema(self) -> dict:
-        """Orchestrates schema creation for all streams.
+    # @cached_property
+    # def schema(self) -> dict:
+    #     """Orchestrates schema creation for all streams.
 
-        Returns:
-            A schema constructed using the get_properties() method of whichever stream
-            is currently in use.
-        """
-        properties = self.get_properties()
-        additional_info = self.config["additional_info"]
-        if additional_info:
-            properties.update({"_sdc_sync_id": {"type": "string"}})
-        return {"properties": properties}
+    #     Returns:
+    #         A schema constructed using the get_properties() method of whichever stream
+    #         is currently in use.
+    #     """
+    #     properties = self.get_properties()
+    #     additional_info = self.config["additional_info"]
+    #     if additional_info:
+    #         properties.update({"_sdc_sync_id": {"type": "string"}})
+    #     return {"properties": properties}
 
-    def get_properties(self) -> dict:
-        """Get a list of properties for a *SV file, to be used in creating a schema.
+    # def get_properties(self) -> dict:
+    #     """Get a list of properties for a *SV file, to be used in creating a schema.
 
-        Each column in the *SV will have its own entry in the schema. All entries will
-        be of the form: `'FIELD_NAME': {'type': ['null', 'string']}`
+    #     Each column in the *SV will have its own entry in the schema. All entries will
+    #     be of the form: `'FIELD_NAME': {'type': ['null', 'string']}`
 
-        Returns:
-            A list of properties representing a *SV file.
-        """
-        properties = {}
+    #     Returns:
+    #         A list of properties representing a *SV file.
+    #     """
+    #     properties = {}
 
-        for field in self.schema_cols:
-            properties.update({field: {"type": ["null", "string"]}})
+    #     for field in self.schema_cols:
+    #         properties.update({field: {"type": ["null", "string"]}})
 
-        return properties
+    #     return properties
 
     def get_key_properties(self, table_name: str) -> list:
         """Get key properties based on table name."""

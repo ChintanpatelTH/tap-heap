@@ -1,0 +1,30 @@
+{
+    "$schema": "http://json-schema.org/schema#",
+    "type": "object",
+    "properties": {
+        "from_user_id": {
+            "type": [
+                "null",
+                "integer"
+            ]
+        },
+        "to_user_id": {
+            "type": [
+                "null",
+                "integer"
+            ]
+        },
+        "time": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "_sdc_sync_id": {
+            "type": [
+                "null",
+                "string"
+            ]
+        }
+    }
+}

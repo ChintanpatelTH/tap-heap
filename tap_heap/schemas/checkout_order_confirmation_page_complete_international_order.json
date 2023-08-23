@@ -1,0 +1,132 @@
+{
+    "$schema": "http://json-schema.org/schema#",
+    "type": "object",
+    "properties": {
+        "event_id": {
+            "type": [
+                "null",
+                "integer"
+            ]
+        },
+        "user_id": {
+            "type": [
+                "null",
+                "integer"
+            ]
+        },
+        "session_id": {
+            "type": [
+                "null",
+                "integer"
+            ]
+        },
+        "type": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "library": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "platform": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "device_type": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "country": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "region": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "city": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "ip": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "referrer": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "browser": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "device": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "domain": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "query": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "path": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "hash": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "transaction_id": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "time": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "_sdc_sync_id": {
+            "type": [
+                "null",
+                "string"
+            ]
+        }
+    }
+}
