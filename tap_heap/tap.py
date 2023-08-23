@@ -41,7 +41,8 @@ class TapHeap(Tap):
         streams = []
 
         manifests = manifest.generate_manifests(self.config["bucket"])
-        sampled_manifest = {k: manifests[k] for k in list(manifests.keys())[:1]}
+        # Pick last manifest as a sample
+        sampled_manifest = {k: manifests[k] for k in list(manifests.keys())[-1:]}
         table_name_to_columns = defaultdict(set)
         for all_table_manifests in sampled_manifest.values():
             for table_name, table_manifest in all_table_manifests.items():
