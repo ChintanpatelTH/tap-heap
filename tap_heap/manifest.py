@@ -8,7 +8,7 @@ logger = logging.getLogger(__name__)
 def get_s3_manifest_file_contents(bucket: str)-> dict:
     """Get manifest contents."""
     manifests = s3.list_manifest_files_in_bucket(bucket)
-    s3_client = s3.get_s3_client(bucket)
+    s3_client = s3.get_s3_resource(bucket)
     # limit manifest files
     # manifests = list(manifests)[-5:]  # noqa: ERA001
     for manifest in manifests:

@@ -41,7 +41,18 @@ def download_file(client, s3_path: str, suffix: int):
         client.download_fileobj(s3_path, Fileobj=f)
 
 
-def get_s3_client(bucket: str):
-    """Get S3 client."""
+def get_s3_resource(bucket: str):
+    """Get S3 resource."""
     s3 = boto3.resource("s3")
     return s3.Bucket(bucket)
+
+def get_s3_client():
+    """Get S3 client."""
+    return boto3.client("s3")
+
+def get_modified_date(client, bucket: str, key: str):
+    response = client.head_object(
+        Bucket=bucket,
+        Key=key,
+    )
+    return response["LastModified"]
