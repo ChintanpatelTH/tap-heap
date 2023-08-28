@@ -89,6 +89,13 @@ class HeapTableStream(HeapStream):
             if dump_id >= int(replication_key) and manifest.get(table_name)
         }
 
+        if self.replication_method == "FULL_TABLE":
+            # Get latest sync id only
+            latest_sync_id = list(table_manifests)[-1]
+            table_manifests = {
+                latest_sync_id: table_manifests[latest_sync_id],
+            }
+
         return (table_manifests, True)
 
     def get_files_to_sync(self, table_manifests: dict, bucket: str) -> dict:

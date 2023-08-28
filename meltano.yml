@@ -20,6 +20,10 @@ plugins:
     select:
     - _key_events_pm__order_confirmation_page_complete_order.*
     - redshift_search_typeahead_tap_suggested_search.*
+    - user_migrations.*
+    metadata:
+      user_migrations:
+        replication-method: FULL_TABLE
   loaders:
   - name: target-jsonl
     variant: andyh1203
