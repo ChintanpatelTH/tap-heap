@@ -75,7 +75,7 @@ class HeapStream(Stream):
         Returns:
             A list of primary key(s) for the stream.
         """
-        return ["event_id"]
+        return self.get_key_properties(self.name)
 
     @primary_keys.setter
     def primary_keys(self, new_value: list[str] | None) -> None:
