@@ -19,7 +19,7 @@ fastavro = { version="^1.8.2", python = ">=3.8,<3.12" }
 python-snappy = { version="^0.6.1" }
 
 [tool.poetry.group.dev.dependencies]
-pytest = "^7.4.0"
+pytest = "^7.4.3"
 singer-sdk = { version="^0.31.1", extras = ["testing"] }
 
 [tool.poetry.extras]
